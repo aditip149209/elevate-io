@@ -1,18 +1,19 @@
-import { useEffect, useState } from "react";
-import { fetchData } from "./api";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './components/Login';
+import Register from './components/Register';
+import ResumeBuilder from './components/ResumeBuilder';
+import Dashboard from './components/Dashboard';
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetchData().then(setMessage);
-  }, []);
-
   return (
-    <div className="p-6 text-center">
-      <h1 className="text-3xl font-bold">React + Node.js + MongoDB</h1>
-      <p className="mt-4 text-lg">{message}</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/resume-builder" element={<ResumeBuilder />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
 
