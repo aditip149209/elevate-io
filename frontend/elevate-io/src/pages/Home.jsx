@@ -1,12 +1,19 @@
 import React from 'react';
+import Navbar from '../components/Navbar.jsx';
+import Hero from '../components/Hero.jsx';
+import Stats from '../components/Stats.jsx';
+import Companies from '../components/Companies.jsx';
 
-function Home() {
+export default function Home() {
   return (
-    <div>
-      <h1>Welcome to ElevateCV.io</h1>
-      <p>This is the home page.</p>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <Stats />
+      <Companies />
+      <footer className="py-6 text-center text-gray-500">
+        © 2025 Elevate IO | All rights reserved
+      </footer>
+    </>
   );
 }
-
-export default Home;

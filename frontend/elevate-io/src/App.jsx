@@ -7,13 +7,7 @@ import ResumeBuilder from './components/ResumeBuilder';
 function App() {
   return (
     <>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/resume">Resume Builder</Link></li>
-        </ul>
-      </nav>
+      
 
       <Routes>
         <Route path="/" element={<Home />} />
